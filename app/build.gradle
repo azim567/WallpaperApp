@@ -45,18 +45,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 
-
     //retrofit logger
     implementation "com.squareup.okhttp3:logging-interceptor:4.0.1"
-//    implementation 'com.github.chrisbanes:PhotoView:latest.release.here'
-
-    //lotie Animation
-    def lottieVersion = "3.4.0"
-    implementation "com.airbnb.android:lottie:$lottieVersion"
-
-    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
-
-    implementation 'com.amitshekhar.android:android-networking:1.0.0'
-
-
 }

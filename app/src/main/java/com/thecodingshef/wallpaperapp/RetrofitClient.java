@@ -18,7 +18,6 @@ public class RetrofitClient {
 
     private HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
 
-
     public RetrofitClient() {
 
         Gson gson = new GsonBuilder()
@@ -27,19 +26,14 @@ public class RetrofitClient {
         interceptor.level(HttpLoggingInterceptor.Level.BODY);
         builder.addInterceptor(interceptor);
 
-
         retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(builder.build())
                 .build();
-
-
     }
 
-
     public static synchronized RetrofitClient getInstance(){
-
         if(retrofitClient==null){
             retrofitClient=new RetrofitClient();
         }

@@ -1,15 +1,12 @@
-package com.thecodingshef.wallpaperapp;
+package com.thecodingshef.wallpaperapp.Activity;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.DownloadManager;
 import android.app.WallpaperManager;
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
@@ -28,6 +25,7 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.github.chrisbanes.photoview.PhotoView;
+import com.thecodingshef.wallpaperapp.R;
 
 import java.io.File;
 import java.io.IOException;
@@ -49,13 +47,12 @@ public class FullImageActivity extends AppCompatActivity {
 
         fullImage=findViewById(R.id.full_image);
         progressBar=findViewById(R.id.progressBar);
-        save=findViewById(R.id.save);
+       // save=findViewById(R.id.save);
         setBack=findViewById(R.id.setBack);
 
         image_url=getIntent().getStringExtra("imageUrl");
 
         loadImage(image_url);
-
 
         // Initialization Of DownLoad Button
         AndroidNetworking.initialize(getApplicationContext());
@@ -77,13 +74,13 @@ public class FullImageActivity extends AppCompatActivity {
             }
         });
         
-        save.setOnClickListener(new View.OnClickListener() {
+       /* save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(FullImageActivity.this, "save hello", Toast.LENGTH_SHORT).show();
                 saveImage(image_url);
             }
-        });
+        });*/
 
 
 
@@ -110,7 +107,7 @@ public class FullImageActivity extends AppCompatActivity {
 
     }
 
-    private void saveImage(String image_url) {
+   /* private void saveImage(String image_url) {
 
         AndroidNetworking.download(this.image_url, dirPath, fileName)
                 .build()
@@ -126,7 +123,7 @@ public class FullImageActivity extends AppCompatActivity {
 
                     }
                 });
-    }
+    }*/
 
     private void setHomeScreen() {
         WallpaperManager wallpaperManager = WallpaperManager.getInstance(getApplicationContext());

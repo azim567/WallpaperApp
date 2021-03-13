@@ -1,6 +1,7 @@
-package com.thecodingshef.wallpaperapp;
+package com.thecodingshef.wallpaperapp.Model;
 
 import com.google.gson.annotations.SerializedName;
+import com.thecodingshef.wallpaperapp.Model.Wallpaper;
 
 import java.util.List;
 

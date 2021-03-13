@@ -1,4 +1,4 @@
-package com.thecodingshef.wallpaperapp;
+package com.thecodingshef.wallpaperapp.Model;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -9,7 +9,6 @@ public class Wallpaper {
 
     public Wallpaper(ImagesDimensions src) {
         this.src = src;
-
     }
 
     public ImagesDimensions getSrc() {
